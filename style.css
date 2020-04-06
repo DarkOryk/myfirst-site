@@ -1,85 +1,59 @@
 body {
   margin: 0;
-
-  
   font-family: "Montserrat", "Helvetica", "Arial", sans-serif;
   font-size: 16px;
   line-height: 32px;
   color: #222222;
-  background-color: #9ccbfa;
+  background-color: #8fc58e;
   background-repeat: no-repeat;
   background-position: top center;
 }
 
-
 .oval {
-border-radius: 90px;
-text-align: center;
-
+display: block;
+    margin-left: auto;
+    margin-right: auto
 }
 
-.center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-
+.row {
+  text-align: justify;
+  align-items: center;
 }
 
-nav {
-float: left;
-width: 14%;
-padding: 0 1% 0 1%;
-
+.bio {
+  text-align: justify;
+  border-color: #ffffff;
+  border-style: dashed;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+  
+.prew {
+  text-align: center;
 }
 
-.page {
-    float: left;
-    width: 80%;
-    padding-right: 4%;
-    /* text-align: center; */
-    
-   }
 
+.head {
+  color: #ffffff;
+  height: 45px;
+  background: radial-gradient(circle farthest-corner at 100px 50px,  #0a1409, #0e2e0a);
+  text-align: center;
+  }
 
-.disabled {
-  pointer-events: none; 
-  color: #000000; 
-
-}
-
-.custom-footer {
-clear: both;
-padding-top: 25px;
-height: 50px;
-outline: 3px solid #000000;
-background-color: rgb(43, 71, 87);
-color: rgb(255, 255, 255);
-
+.powwered {
+  text-align: right;
+  padding-right: 2%;
 }
 
 .feedback {
-float: left;
-padding-left: 25px;
 text-align: left;
-
+padding-left: 2%;
 }
 
-.gif {
 
-float: center;
-text-align: center;
-
-
-}
-
-.contact {
-  float: right;
-  padding-right: 25px;
-  text-align: right;
-
-}
-
-.border {
-border: 3px solid #000000;
-
-}
+.bot {
+  color: #ffffff;
+  height: 50px;
+  background: radial-gradient(circle farthest-corner at 100px 50px, #0a1409, #0e2e0a);
+  text-align: center;
+  }
