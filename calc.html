@@ -27,33 +27,67 @@
 <main>
 <div class="container">
   <div class="row shadow">
-    <div class="col-12 col-sm-0 col-md-5 col-lg-4 test444"><img class="logo" src="img/logo-menu.ico" height="50" width="50" alt=""> Best calc in da web</div>
-    <div class="col-12 col-sm-12 col-md-7 col-lg-8 main-calc"><p>Коли осилю метаніт - тут має бути рофлан-калькулятор</p>
-       
-      <div class="с1">
-        <form>
-          <input class="c1-2" type="text" placeholder="Введіть перше число...">
-          <select class="c2">
-            <option>Виберіть дію</option>
-            <option>+</option>
-            <option>-</option>
-            <option>*</option>
-            <option>/</option>
-          </select>
-          <input class="c1-2" type="text" placeholder="Введіть друге число...">
-          <button class="button-calc" type="submit"></button>
-        </form>
-        <div class="c3"><span class="">Результат = <output name="result"></output></span></div>
-
+    <div class="col-12 col-sm-0 col-md-4 col-lg-4 test444"><img class="logo" src="img/logo-menu.ico" height="50" width="50" alt=""></div>
+    <div class="col-12 col-sm-12 col-md-8 col-lg-8 main-calc"><p>Коли осилю метаніт - тут має бути рофлан-калькулятор</p>
       
-      </div> 
+<!-- CALC       -->
+
+      <div class="с1">
+
+        <form>
+        <input class="c1-2" type="text" id="txt" placeholder = "Введіть перше число"/>
 
 
+        <select class="c2" name="caldi" id="caldi" onchange="chg ()">
 
+          <option value ="Diya" >Виберіть дію</option>
+          <option value = "+">+</option>
+          <option value = "-">-</option>
+          <option value = "*">*</option>
+          <option value = "/">/</option>
 
+        </select>
+
+        <input class="c1-2" type="text" id="tx2" placeholder = "Введіть друге число"/>
+        <input class="button-calc" type="button" id="btn" value="">
+      </form>
+
+        <div class="c3"><span> Результат = <span id="result_text">( ･_･)♡</span></div>
+      </div>
+
+<!-- CALC  END      -->
+<hr></hr>
+
+                <button class="button-start"  id="btnStart">Розпочати гру!</button> 
+                    <button class="button-clear"  id="btnClear">Очистити поле</button>
+            <div>
+              <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                <button class="button-for-x" id="btn1">[0][0]</button>
+                <button class="button-for-x" id="btn2">[0][1]</button>
+                <button class="button-for-x" id="btn3">[0][2]</button>
+              </div> <br>
+
+              <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                <button class="button-for-x" id="btn4">[1][0]</button>
+                <button class="button-for-x" id="btn5">[1][1]</button>
+                <button class="button-for-x" id="btn6">[1][2]</button>
+              </div> <br>
+
+              <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                <button class="button-for-x" id="btn7">[2][0]</button>
+                <button class="button-for-x" id="btn8">[2][1]</button>
+                <button class="button-for-x" id="btn9">[2][2]</button>
+              </div>
+            </div>        
+          
+            <span>v0.21(beta)</span> <br>
+      
     </div>
+     
   </div>
 </div>
+
+
 </main>
 
 
@@ -84,6 +118,13 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 <script src="https://use.fontawesome.com/99a41c697b.js"></script>
+<script src="js/alert.js"></script>
+
+
+
+
+
+
 </body>
 </html>
 
