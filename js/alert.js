@@ -35,35 +35,349 @@ switch (d) {
   }
 }
 
+// document.getElementById("btn").onclick = someFunc;
+// document.getElementById("btnStart").onclick = startTheGame;
+// document.getElementById("btnClear").onclick = clearBoard;
+
+// function clearBoard () {
+//   document.getElementById('btn1').textContent = "[0][0]";
+//   document.getElementById('btn2').textContent = "[0][1]";
+//   document.getElementById('btn3').textContent = "[0][2]";
+//   document.getElementById('btn4').textContent = "[1][0]";
+//   document.getElementById('btn5').textContent = "[1][1]";
+//   document.getElementById('btn6').textContent = "[1][2]";
+//   document.getElementById('btn7').textContent = "[2][0]";
+//   document.getElementById('btn8').textContent = "[2][1]";
+//   document.getElementById('btn9').textContent = "[2][2]";
+// };
+
+// function startTheGame () {
+
+//   const cell_state = {
+//     EMPTY: 0,
+//     CROSS: 1,
+//     ZERO:  2
+// }
+
+// let GAME = [
+//   [cell_state.EMPTY, cell_state.EMPTY, cell_state.EMPTY],
+//   [cell_state.EMPTY, cell_state.EMPTY, cell_state.EMPTY],
+//   [cell_state.EMPTY, cell_state.EMPTY, cell_state.EMPTY]
+// ];
+
+//   function check () {
+
+//     /* 
+//         [0][0]  [0][1]  [0][2]
+//         [1][0]  [1][1]  [1][2]
+//         [2][0]  [2][1]  [2][2]
+//     */
+   
+//       return GAME[0][0] != cell_state.EMPTY && GAME[0][0] == GAME[0][1] && GAME[0][0] == GAME[0][2] ||
+//       GAME[1][0] != cell_state.EMPTY && GAME[1][0] == GAME[1][1] && GAME[1][0] == GAME[1][2] ||
+//       GAME[2][0] != cell_state.EMPTY && GAME[2][0] == GAME[2][1] && GAME[2][1] == GAME[2][2] ||
+    
+//       GAME[0][0] != cell_state.EMPTY && GAME[0][0] == GAME[1][0] && GAME[0][0] == GAME[2][0] ||
+//       GAME[0][1] != cell_state.EMPTY && GAME[0][1] == GAME[1][1] && GAME[0][1] == GAME[2][1] ||
+//       GAME[0][2] != cell_state.EMPTY && GAME[0][2] == GAME[1][2] && GAME[1][2] == GAME[2][2] ||
+    
+//       GAME[0][0] != cell_state.EMPTY && GAME[0][0] == GAME[1][1] && GAME[1][1] == GAME[2][2] ||
+//       GAME[2][0] != cell_state.EMPTY && GAME[2][0] == GAME[1][1] && GAME[1][1] == GAME[0][2]
+  
+//     }
+
+// let gameEnd = 0;
+
+// oxrana: while (gameEnd <= 5) {
+
+//   for (; ;) {
+
+//     alert('Ходить гравець 1 (хрестики)')
+
+//     let stepCrossX = prompt('Введіть крок [?] [ ] в форматі');
+//     if (stepCrossX === null) {
+//       break oxrana;
+//     }
+
+//     let stepCrossY = prompt('Введіть крок [ ] [?] в форматі');
+//     if (stepCrossY === null) {
+//       break oxrana;
+//     }
+
+//     if (GAME[stepCrossX][stepCrossY] == cell_state.EMPTY) {
+
+//       GAME[stepCrossX][stepCrossY] = cell_state.CROSS;
+
+//       if ( stepCrossX === "0" && stepCrossY === "0" ) {
+//         document.getElementById('btn1').textContent = "X";
+//       }
+//       else if ( stepCrossX === "0" && stepCrossY === "1" ) {
+//         document.getElementById('btn2').textContent = "X";
+//       }
+//       else if ( stepCrossX === "0" && stepCrossY === "2" ) {
+//         document.getElementById('btn3').textContent = "X";
+//       }
+//       else if ( stepCrossX === "1" && stepCrossY === "0" ) {
+//         document.getElementById('btn4').textContent = "X";
+//       }
+//       else if ( stepCrossX === "1" && stepCrossY === "1" ) {
+//         document.getElementById('btn5').textContent = "X";
+//       }
+//       else if ( stepCrossX === "1" && stepCrossY === "2" ) {
+//         document.getElementById('btn6').textContent = "X";
+//       }
+//       else if ( stepCrossX === "2" && stepCrossY === "0" ) {
+//         document.getElementById('btn7').textContent = "X";
+//       }
+//       else if ( stepCrossX === "2" && stepCrossY === "1" ) {
+//         document.getElementById('btn8').textContent = "X";
+//       }
+//       else if ( stepCrossX === "2" && stepCrossY === "2" ) {
+//         document.getElementById('btn9').textContent = "X";
+//       }
+//       break;
+//     }
+
+//     else if (alert('Ви вказали зайняту клітинку. Спробуйте ще.'))
+//     continue;
+//   }
+
+//   if ( check() == true ) {
+
+//     alert("Гравець 1 (хрестики) - Переміг!!!")
+//     break;
+//   }
+
+//   if (gameEnd === 4) {
+//     break oxrana;
+//   }
+
+//   for (; ;) {
+//     alert('Ходить гравець 2 (нулики)')
+
+//     let stepCrossX = prompt('Введіть крок [?] [ ] в форматі');
+//     if (stepCrossX === null) {
+//       break oxrana;
+//     }
+//     let stepCrossY = prompt('Введіть крок [ ] [?] в форматі');
+//     if (stepCrossY === null) {
+//       break oxrana;
+//     }
+
+//     if (GAME[stepCrossX][stepCrossY] == cell_state.EMPTY) {
+
+//       GAME[stepCrossX][stepCrossY] = cell_state.ZERO;
+
+//       if ( stepCrossX === "0" && stepCrossY === "0" ) {
+//         document.getElementById('btn1').textContent = "O";
+//       }
+//       else if ( stepCrossX === "0" && stepCrossY === "1" ) {
+//         document.getElementById('btn2').textContent = "O";
+//       }
+//       else if ( stepCrossX === "0" && stepCrossY === "2" ) {
+//         document.getElementById('btn3').textContent = "O";
+//       }
+//       else if ( stepCrossX === "1" && stepCrossY === "0" ) {
+//         document.getElementById('btn4').textContent = "O";
+//       }
+//       else if ( stepCrossX === "1" && stepCrossY === "1" ) {
+//         document.getElementById('btn5').textContent = "O";
+//       }
+//       else if ( stepCrossX === "1" && stepCrossY === "2" ) {
+//         document.getElementById('btn6').textContent = "O";
+//       }
+//       else if ( stepCrossX === "2" && stepCrossY === "0" ) {
+//         document.getElementById('btn7').textContent = "O";
+//       }
+//       else if ( stepCrossX === "2" && stepCrossY === "1" ) {
+//         document.getElementById('btn8').textContent = "O";
+//       }
+//       else if ( stepCrossX === "2" && stepCrossY === "2" ) {
+//         document.getElementById('btn9').textContent = "O";
+//       }
+//       break;
+//     }
+      
+//     else (alert('Ви вказали зайняту клітинку. Спробуйте ще.'))
+//     continue;
+//   }
+
+//   if ( check() == true ) { 
+
+//     alert("Гравець 2 (нулики) - Переміг!!!")
+//     break;
+//   }
+
+//   gameEnd++;
+// }
+// }
+
+
+let value = "rofl";
+
 document.getElementById("btn").onclick = someFunc;
-document.getElementById("btnStart").onclick = startTheGame;
-document.getElementById("btnClear").onclick = clearBoard;
+document.getElementById("btnCross").onclick = valueChangeToCROSS;
+document.getElementById("btnZero").onclick = valueChangeToZERO;
+document.getElementById("btnClear").onclick = clearField;
 
-function clearBoard () {
-  document.getElementById('btn1').textContent = "[0][0]";
-  document.getElementById('btn2').textContent = "[0][1]";
-  document.getElementById('btn3').textContent = "[0][2]";
-  document.getElementById('btn4').textContent = "[1][0]";
-  document.getElementById('btn5').textContent = "[1][1]";
-  document.getElementById('btn6').textContent = "[1][2]";
-  document.getElementById('btn7').textContent = "[2][0]";
-  document.getElementById('btn8').textContent = "[2][1]";
-  document.getElementById('btn9').textContent = "[2][2]";
-};
 
-function startTheGame () {
+function clearField () {
+  
+  GAME = [
+    [cell_state.EMPTY, cell_state.EMPTY, cell_state.EMPTY],
+    [cell_state.EMPTY, cell_state.EMPTY, cell_state.EMPTY],
+    [cell_state.EMPTY, cell_state.EMPTY, cell_state.EMPTY]
+    ];
+  clearBoard ();
 
-  const cell_state = {
-    EMPTY: 0,
-    CROSS: 1,
-    ZERO:  2
+}
+
+function test () {
+
+  console.log(value);
+}
+
+function valueChangeToCROSS () {
+
+   value = "CROSS";
+}
+
+function valueChangeToZERO () {
+
+  value = "ZERO";
+}
+
+const cell_state = {
+  EMPTY: 0,
+  CROSS: 1,
+  ZERO:  2
 }
 
 let GAME = [
-  [cell_state.EMPTY, cell_state.EMPTY, cell_state.EMPTY],
-  [cell_state.EMPTY, cell_state.EMPTY, cell_state.EMPTY],
-  [cell_state.EMPTY, cell_state.EMPTY, cell_state.EMPTY]
+[cell_state.EMPTY, cell_state.EMPTY, cell_state.EMPTY],
+[cell_state.EMPTY, cell_state.EMPTY, cell_state.EMPTY],
+[cell_state.EMPTY, cell_state.EMPTY, cell_state.EMPTY]
 ];
+
+document.getElementById('btn1G').onclick = function(){btnG(0, 0, value);};
+document.getElementById('btn2G').onclick = function(){btnG(0, 1, value);};
+document.getElementById('btn3G').onclick = function(){btnG(0, 2, value);};
+document.getElementById('btn4G').onclick = function(){btnG(1, 0, value);};
+document.getElementById('btn5G').onclick = function(){btnG(1, 1, value);};
+document.getElementById('btn6G').onclick = function(){btnG(1, 2, value);};
+document.getElementById('btn7G').onclick = function(){btnG(2, 0, value);};
+document.getElementById('btn8G').onclick = function(){btnG(2, 1, value);};
+document.getElementById('btn9G').onclick = function(){btnG(2, 2, value);};
+
+function btnG (a, b, value) {
+
+if (value == "CROSS") {
+
+  if (GAME[a][b] == cell_state.EMPTY) {
+    GAME[a][b] = cell_state.CROSS;
+  }
+  if (a === 0 && b === 0) {
+    document.getElementById('btn1G').textContent = "X";
+    }
+    if (a === 0 && b === 1) {
+      document.getElementById('btn2G').textContent = "X";
+      }
+      if (a === 0 && b === 2) {
+        document.getElementById('btn3G').textContent = "X";
+        }
+        if (a === 1 && b === 0) {
+          document.getElementById('btn4G').textContent = "X";
+          }
+          if (a === 1 && b === 1) {
+            document.getElementById('btn5G').textContent = "X";
+            }
+            if (a === 1 && b === 2) {
+              document.getElementById('btn6G').textContent = "X";
+              }
+              if (a === 2 && b === 0) {
+                document.getElementById('btn7G').textContent = "X";
+                }
+                if (a === 2 && b === 1) {
+                  document.getElementById('btn8G').textContent = "X";
+                  }
+                  if (a === 2 && b === 2) {
+                    document.getElementById('btn9G').textContent = "X";
+                    }    
+}
+if ( check() == true ) {
+
+    if (confirm("Перемогли хрестики ^_^. Ви бажаєте очистити поле, і зіграти ще раз?")) {
+    // value = "rofl";
+    GAME = [
+      [cell_state.EMPTY, cell_state.EMPTY, cell_state.EMPTY],
+      [cell_state.EMPTY, cell_state.EMPTY, cell_state.EMPTY],
+      [cell_state.EMPTY, cell_state.EMPTY, cell_state.EMPTY]
+      ];
+      clearBoard();
+    }
+}
+
+if (value == "ZERO") {
+
+  if (GAME[a][b] == cell_state.EMPTY) {
+    GAME[a][b] = cell_state.ZERO;
+    if (a === 0 && b === 0) {
+      document.getElementById('btn1G').textContent = "O";
+      }
+      if (a === 0 && b === 1) {
+        document.getElementById('btn2G').textContent = "O";
+        }
+        if (a === 0 && b === 2) {
+          document.getElementById('btn3G').textContent = "O";
+          }
+          if (a === 1 && b === 0) {
+            document.getElementById('btn4G').textContent = "O";
+            }
+            if (a === 1 && b === 1) {
+              document.getElementById('btn5G').textContent = "O";
+              }
+              if (a === 1 && b === 2) {
+                document.getElementById('btn6G').textContent = "O";
+                }
+                if (a === 2 && b === 0) {
+                  document.getElementById('btn7G').textContent = "O";
+                  }
+                  if (a === 2 && b === 1) {
+                    document.getElementById('btn8G').textContent = "O";
+                    }
+                    if (a === 2 && b === 2) {
+                      document.getElementById('btn9G').textContent = "O";
+                      } 
+}
+
+  if ( check() == true ) {
+
+    if (confirm("Перемогли нулики ^_^. Ви бажаєте очистити поле, і зіграти ще раз?")) {
+
+      // value = "rofl";
+  
+      GAME = [
+        [cell_state.EMPTY, cell_state.EMPTY, cell_state.EMPTY],
+        [cell_state.EMPTY, cell_state.EMPTY, cell_state.EMPTY],
+        [cell_state.EMPTY, cell_state.EMPTY, cell_state.EMPTY]
+        ];
+        clearBoard();
+      }
+  }
+}
+}
+
+function clearBoard () {
+  document.getElementById('btn1G').textContent = "?";
+  document.getElementById('btn2G').textContent = "?";
+  document.getElementById('btn3G').textContent = "?";
+  document.getElementById('btn4G').textContent = "?";
+  document.getElementById('btn5G').textContent = "?";
+  document.getElementById('btn6G').textContent = "?";
+  document.getElementById('btn7G').textContent = "?";
+  document.getElementById('btn8G').textContent = "?";
+  document.getElementById('btn9G').textContent = "?";
+};
 
   function check () {
 
@@ -86,131 +400,11 @@ let GAME = [
   
     }
 
-let gameEnd = 0;
+  
 
-oxrana: while (gameEnd <= 5) {
 
-  for (; ;) {
 
-    alert('Ходить гравець 1 (хрестики)')
 
-    let stepCrossX = prompt('Введіть крок [?] [ ] в форматі');
-    if (stepCrossX === null) {
-      break oxrana;
-    }
-
-    let stepCrossY = prompt('Введіть крок [ ] [?] в форматі');
-    if (stepCrossY === null) {
-      break oxrana;
-    }
-
-    if (GAME[stepCrossX][stepCrossY] == cell_state.EMPTY) {
-
-      GAME[stepCrossX][stepCrossY] = cell_state.CROSS;
-
-      if ( stepCrossX === "0" && stepCrossY === "0" ) {
-        document.getElementById('btn1').textContent = "X";
-      }
-      else if ( stepCrossX === "0" && stepCrossY === "1" ) {
-        document.getElementById('btn2').textContent = "X";
-      }
-      else if ( stepCrossX === "0" && stepCrossY === "2" ) {
-        document.getElementById('btn3').textContent = "X";
-      }
-      else if ( stepCrossX === "1" && stepCrossY === "0" ) {
-        document.getElementById('btn4').textContent = "X";
-      }
-      else if ( stepCrossX === "1" && stepCrossY === "1" ) {
-        document.getElementById('btn5').textContent = "X";
-      }
-      else if ( stepCrossX === "1" && stepCrossY === "2" ) {
-        document.getElementById('btn6').textContent = "X";
-      }
-      else if ( stepCrossX === "2" && stepCrossY === "0" ) {
-        document.getElementById('btn7').textContent = "X";
-      }
-      else if ( stepCrossX === "2" && stepCrossY === "1" ) {
-        document.getElementById('btn8').textContent = "X";
-      }
-      else if ( stepCrossX === "2" && stepCrossY === "2" ) {
-        document.getElementById('btn9').textContent = "X";
-      }
-      break;
-    }
-
-    else if (alert('Ви вказали зайняту клітинку. Спробуйте ще.'))
-    continue;
-  }
-
-  if ( check() == true ) {
-
-    alert("Гравець 1 (хрестики) - Переміг!!!")
-    break;
-  }
-
-  if (gameEnd === 4) {
-    break oxrana;
-  }
-
-  for (; ;) {
-    alert('Ходить гравець 2 (нулики)')
-
-    let stepCrossX = prompt('Введіть крок [?] [ ] в форматі');
-    if (stepCrossX === null) {
-      break oxrana;
-    }
-    let stepCrossY = prompt('Введіть крок [ ] [?] в форматі');
-    if (stepCrossY === null) {
-      break oxrana;
-    }
-
-    if (GAME[stepCrossX][stepCrossY] == cell_state.EMPTY) {
-
-      GAME[stepCrossX][stepCrossY] = cell_state.ZERO;
-
-      if ( stepCrossX === "0" && stepCrossY === "0" ) {
-        document.getElementById('btn1').textContent = "O";
-      }
-      else if ( stepCrossX === "0" && stepCrossY === "1" ) {
-        document.getElementById('btn2').textContent = "O";
-      }
-      else if ( stepCrossX === "0" && stepCrossY === "2" ) {
-        document.getElementById('btn3').textContent = "O";
-      }
-      else if ( stepCrossX === "1" && stepCrossY === "0" ) {
-        document.getElementById('btn4').textContent = "O";
-      }
-      else if ( stepCrossX === "1" && stepCrossY === "1" ) {
-        document.getElementById('btn5').textContent = "O";
-      }
-      else if ( stepCrossX === "1" && stepCrossY === "2" ) {
-        document.getElementById('btn6').textContent = "O";
-      }
-      else if ( stepCrossX === "2" && stepCrossY === "0" ) {
-        document.getElementById('btn7').textContent = "O";
-      }
-      else if ( stepCrossX === "2" && stepCrossY === "1" ) {
-        document.getElementById('btn8').textContent = "O";
-      }
-      else if ( stepCrossX === "2" && stepCrossY === "2" ) {
-        document.getElementById('btn9').textContent = "O";
-      }
-      break;
-    }
-      
-    else (alert('Ви вказали зайняту клітинку. Спробуйте ще.'))
-    continue;
-  }
-
-  if ( check() == true ) { 
-
-    alert("Гравець 2 (нулики) - Переміг!!!")
-    break;
-  }
-
-  gameEnd++;
-}
-}
 
 
 // function newUser(name, age, permit) {
