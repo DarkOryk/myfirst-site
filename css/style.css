@@ -383,6 +383,7 @@ body {
 }
 
 .main-calc {
+    height: 60rem;
     text-align: center;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
@@ -431,6 +432,9 @@ body {
     height: 15px;
 }
 
+.button-clear {
+margin-top: 0.5rem;
+}
 
 .cross {
     padding-top: 2rem;
@@ -441,21 +445,40 @@ body {
 .button-for-x {
     width: 3rem;
     height: 3rem;
-    font-size: small;
+    /* font-size: small; */
     font-weight: bold;
 }
 
-.button-start {
+.n-start {
     margin-bottom: 1rem;
 }
 
-.button-clear {
-    margin-left: 1rem;
+li {
+    text-align: justify;
 }
+
+
+.rule {
+    color: #00344c;
+    font-size: smaller;
+
+
+}
+
+
 /* CALC.HTML END */
 
 
 @media (min-width: 768px) and (max-width: 991px) {  /* md (>=768 и <=991) */
+
+
+    .button-for-x {
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: small;
+        font-weight: bold;
+    }
+
 
 .left-side {
     padding-left: 1.5rem;
@@ -509,6 +532,27 @@ body {
 
 @media (min-width: 340px) and (max-width: 767px) {  /* sm (>=576 и <=767) */
 
+    .button-for-x {
+        display: none;
+        }
+    
+    
+    .button-cross {
+        display: none;
+    }
+    
+    .button-zero {
+        display: none;
+    }
+
+
+    .button-for-x {
+        width: 2rem;
+        height: 2rem;
+        font-size: small;
+        font-weight: bold;
+    }
+    
 .header-text {
     margin-left: 0px;
     margin-top: 10px;
@@ -599,7 +643,22 @@ body {
 }
 }
 
-@media (min-width: 300px) and (max-width: 339px) {  /* sm (>=576 и <=767) */
+@media (min-width: 200px) and (max-width: 339px) {  /* sm (>=576 и <=767) */
+
+
+.button-for-x {
+    display: none;
+    }
+
+
+.button-cross {
+    display: none;
+}
+
+.button-zero {
+    display: none;
+}
+
 
 .header-text {
     font-size: smaller;
