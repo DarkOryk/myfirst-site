@@ -212,39 +212,39 @@ switch (d) {
 // }
 // }
 
-
-let value = "rofl";
-
 document.getElementById("btn").onclick = someFunc;
 document.getElementById("btnCross").onclick = valueChangeToCROSS;
 document.getElementById("btnZero").onclick = valueChangeToZERO;
 document.getElementById("btnClear").onclick = clearField;
 
+let checkValue = "rofl";
 
 function clearField () {
-  
+
   GAME = [
     [cell_state.EMPTY, cell_state.EMPTY, cell_state.EMPTY],
     [cell_state.EMPTY, cell_state.EMPTY, cell_state.EMPTY],
     [cell_state.EMPTY, cell_state.EMPTY, cell_state.EMPTY]
     ];
+
   clearBoard ();
+  checkValue = "rofl";
 
-}
-
-function test () {
-
-  console.log(value);
 }
 
 function valueChangeToCROSS () {
 
-   value = "CROSS";
+   checkValue = "CROSS";
 }
 
 function valueChangeToZERO () {
 
-  value = "ZERO";
+  checkValue = "ZERO";
+}
+
+function valueChangeToEMPTY () {
+
+  checkValue = "rofl";
 }
 
 const cell_state = {
@@ -259,55 +259,58 @@ let GAME = [
 [cell_state.EMPTY, cell_state.EMPTY, cell_state.EMPTY]
 ];
 
-document.getElementById('btn1G').onclick = function(){btnG(0, 0, value);};
-document.getElementById('btn2G').onclick = function(){btnG(0, 1, value);};
-document.getElementById('btn3G').onclick = function(){btnG(0, 2, value);};
-document.getElementById('btn4G').onclick = function(){btnG(1, 0, value);};
-document.getElementById('btn5G').onclick = function(){btnG(1, 1, value);};
-document.getElementById('btn6G').onclick = function(){btnG(1, 2, value);};
-document.getElementById('btn7G').onclick = function(){btnG(2, 0, value);};
-document.getElementById('btn8G').onclick = function(){btnG(2, 1, value);};
-document.getElementById('btn9G').onclick = function(){btnG(2, 2, value);};
+document.getElementById('btn1G').onclick = function(){btnG(0, 0, checkValue);};
+document.getElementById('btn2G').onclick = function(){btnG(0, 1, checkValue);};
+document.getElementById('btn3G').onclick = function(){btnG(0, 2, checkValue);};
+document.getElementById('btn4G').onclick = function(){btnG(1, 0, checkValue);};
+document.getElementById('btn5G').onclick = function(){btnG(1, 1, checkValue);};
+document.getElementById('btn6G').onclick = function(){btnG(1, 2, checkValue);};
+document.getElementById('btn7G').onclick = function(){btnG(2, 0, checkValue);};
+document.getElementById('btn8G').onclick = function(){btnG(2, 1, checkValue);};
+document.getElementById('btn9G').onclick = function(){btnG(2, 2, checkValue);};
 
 function btnG (a, b, value) {
 
-if (value == "CROSS") {
+if (value === "CROSS") {
 
   if (GAME[a][b] == cell_state.EMPTY) {
-    GAME[a][b] = cell_state.CROSS;
-  }
+    GAME[a][b] = cell_state.CROSS; 
+
   if (a === 0 && b === 0) {
     document.getElementById('btn1G').textContent = "X";
-    }
-    if (a === 0 && b === 1) {
-      document.getElementById('btn2G').textContent = "X";
-      }
-      if (a === 0 && b === 2) {
-        document.getElementById('btn3G').textContent = "X";
-        }
-        if (a === 1 && b === 0) {
-          document.getElementById('btn4G').textContent = "X";
-          }
-          if (a === 1 && b === 1) {
-            document.getElementById('btn5G').textContent = "X";
-            }
-            if (a === 1 && b === 2) {
-              document.getElementById('btn6G').textContent = "X";
-              }
-              if (a === 2 && b === 0) {
-                document.getElementById('btn7G').textContent = "X";
-                }
-                if (a === 2 && b === 1) {
-                  document.getElementById('btn8G').textContent = "X";
-                  }
-                  if (a === 2 && b === 2) {
-                    document.getElementById('btn9G').textContent = "X";
-                    }    
+      value ="";
+  }
+  if (a === 0 && b === 1) {
+    document.getElementById('btn2G').textContent = "X";
+  }
+  if (a === 0 && b === 2) {
+    document.getElementById('btn3G').textContent = "X";
+  }
+  if (a === 1 && b === 0) {
+    document.getElementById('btn4G').textContent = "X";
+  }
+  if (a === 1 && b === 1) {
+    document.getElementById('btn5G').textContent = "X";
+  }
+  if (a === 1 && b === 2) {
+    document.getElementById('btn6G').textContent = "X";
+  }
+  if (a === 2 && b === 0) {
+    document.getElementById('btn7G').textContent = "X";
+  }
+  if (a === 2 && b === 1) {
+    document.getElementById('btn8G').textContent = "X";
+  }
+  if (a === 2 && b === 2) {
+    document.getElementById('btn9G').textContent = "X";
+  } 
+  checkValue = "rofl";
+}
+
 }
 if ( check() == true ) {
 
     if (confirm("Перемогли хрестики ^_^. Ви бажаєте очистити поле, і зіграти ще раз?")) {
-    // value = "rofl";
     GAME = [
       [cell_state.EMPTY, cell_state.EMPTY, cell_state.EMPTY],
       [cell_state.EMPTY, cell_state.EMPTY, cell_state.EMPTY],
@@ -320,42 +323,41 @@ if ( check() == true ) {
 if (value == "ZERO") {
 
   if (GAME[a][b] == cell_state.EMPTY) {
-    GAME[a][b] = cell_state.ZERO;
-    if (a === 0 && b === 0) {
-      document.getElementById('btn1G').textContent = "O";
-      }
-      if (a === 0 && b === 1) {
-        document.getElementById('btn2G').textContent = "O";
-        }
-        if (a === 0 && b === 2) {
-          document.getElementById('btn3G').textContent = "O";
-          }
-          if (a === 1 && b === 0) {
-            document.getElementById('btn4G').textContent = "O";
-            }
-            if (a === 1 && b === 1) {
-              document.getElementById('btn5G').textContent = "O";
-              }
-              if (a === 1 && b === 2) {
-                document.getElementById('btn6G').textContent = "O";
-                }
-                if (a === 2 && b === 0) {
-                  document.getElementById('btn7G').textContent = "O";
-                  }
-                  if (a === 2 && b === 1) {
-                    document.getElementById('btn8G').textContent = "O";
-                    }
-                    if (a === 2 && b === 2) {
-                      document.getElementById('btn9G').textContent = "O";
-                      } 
+  GAME[a][b] = cell_state.ZERO;
+
+  if (a === 0 && b === 0) {
+    document.getElementById('btn1G').textContent = "O";
+  }
+  if (a === 0 && b === 1) {
+    document.getElementById('btn2G').textContent = "O";
+  }
+  if (a === 0 && b === 2) {
+    document.getElementById('btn3G').textContent = "O";
+  }
+  if (a === 1 && b === 0) {
+    document.getElementById('btn4G').textContent = "O";
+  }
+  if (a === 1 && b === 1) {
+    document.getElementById('btn5G').textContent = "O";
+  }
+  if (a === 1 && b === 2) {
+    document.getElementById('btn6G').textContent = "O";
+  }
+  if (a === 2 && b === 0) {
+    document.getElementById('btn7G').textContent = "O";
+  }
+  if (a === 2 && b === 1) {
+    document.getElementById('btn8G').textContent = "O";
+  }
+  if (a === 2 && b === 2) {
+    document.getElementById('btn9G').textContent = "O";
+  } 
+  checkValue = "rofl";
 }
 
   if ( check() == true ) {
 
     if (confirm("Перемогли нулики ^_^. Ви бажаєте очистити поле, і зіграти ще раз?")) {
-
-      // value = "rofl";
-  
       GAME = [
         [cell_state.EMPTY, cell_state.EMPTY, cell_state.EMPTY],
         [cell_state.EMPTY, cell_state.EMPTY, cell_state.EMPTY],
@@ -399,12 +401,6 @@ function clearBoard () {
       GAME[2][0] != cell_state.EMPTY && GAME[2][0] == GAME[1][1] && GAME[1][1] == GAME[0][2]
   
     }
-
-  
-
-
-
-
 
 
 // function newUser(name, age, permit) {
