@@ -34,25 +34,25 @@
 
       <div class="с1">
 
-        <form>
-        <input class="c1-2" type="text" id="txt" placeholder = "Введіть перше число"/>
+        
+          <form>
+                
+            <input type="number" class=" c2" id="txt" placeholder="Введіть перше число">
 
+            <select class="custom-select с2 col-sm-3" name="caldi" id="caldi" onchange="chg ()">
+              <option selected>Виберіть дію</option>
+              <option value = "+">+</option>
+              <option value = "-">-</option>
+              <option value = "*">*</option>
+              <option value = "/">/</option>
+            </select>
+    
+            <input type="number" class="c2" id="tx2" placeholder="Введіть друге число">
 
-        <select class="c2" name="caldi" id="caldi" onchange="chg ()">
+            <input class="button-calc" type="button" id="btn" value="">
+         </form>
 
-          <option value ="Diya" >Виберіть дію</option>
-          <option value = "+">+</option>
-          <option value = "-">-</option>
-          <option value = "*">*</option>
-          <option value = "/">/</option>
-
-        </select>
-
-        <input class="c1-2" type="text" id="tx2" placeholder = "Введіть друге число"/>
-        <input class="button-calc" type="button" id="btn" value="">
-      </form>
-
-        <div class="c3"><span> Результат = <span id="result_text">( ･_･)♡</span></div>
+          <div class="c3"><span> Результат = <span id="result_text">( ･_･)♡</span></div>
       </div>
 
 <!-- CALC  END      -->
