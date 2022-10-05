@@ -226,7 +226,6 @@ function clearBoard () {
   
     }
 
-// KEKW
 // function newUser(name, age, permit) {
   
 //   return {
