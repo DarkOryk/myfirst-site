@@ -27,7 +27,7 @@
     <div class="container">
       <div class="row shadow">
         <div class="col-12 col-sm-0 col-md-4 col-lg-4 test444"><img class="logo" src="img/logo-menu.ico" height="50" width="50" alt=""></div>
-        <div class="col-12 col-sm-12 col-md-8 col-lg-8 main-calc"><p>Коли осилю метаніт - тут має бути рофлан-калькулятор</p>
+        <div class="col-12 col-sm-12 col-md-8 col-lg-8 main-calc"><p>Коли осилю метаніт - тут має бути рофлан-калькулятор v2</p>
     <!-- CALC       -->
           <div class="с1">
 
@@ -86,12 +86,39 @@
         <div class="col-3"><button class="button-zero"  id="btnZero">Нулик</button>
                           <button class="button-cross"  id="btnCross">Хрестик</button>
                           <button class="button-clear"  id="btnClear">Очистити поле гри</button></div>
-        </div>        
-      
+      </div>        
       </div>   
-        </div>
+          <div class="container privatAPI ">
+            <div class="row justify-content-center resultsTEST shadow2 ">
+              
+              <div class="col-4 col-sm-auto  col-md-auto mildee" > <div class="col-12"> <p><i>Пошлі кофє піть?</i></p> </div> <div class="col-12"> <img class="logobank" src="img/PrivatLogo.png" height="50" width="50" alt="Пошлі кофє піть"></div> </div>
+              <div class="col-6 col-sm-auto col-md-auto mildee">
+                 
+                <table class="table resultsTEST" border="0.2">
+                  <tr> 
+                     <th>Валюта</th>
+                     <th>Купівля</th>
+                     <th>Продаж</th>
+
+                   </tr>
+                   <tr>
+                     <th>USD</th>
+                     <td id="APIresultsUSD_buy">Купівля</td>
+                     <td id="APIresultsUSD_sell">Продаж</td>
+                     
+                   </tr>
+                   <tr> 
+                     <th>EUR</th>
+                     <td id="APIresultsEUR_buy">Купівля</td>
+                     <td id="APIresultsEUR_sell">Продаж</td>
+                     
+                  </tr>
+                 </table>
+              </div>    
+          </div>
+    </div>
         
-      </div>
+    </div>
     </div>
 </main>
 
@@ -121,6 +148,7 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 <script src="https://use.fontawesome.com/99a41c697b.js"></script>
 <script src="js/alert.js"></script>
+<script src="js/jsonParse.js"></script>
 
 
 </body>
